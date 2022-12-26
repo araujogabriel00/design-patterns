@@ -1,4 +1,4 @@
-package abstractfactory
+package creational.abstractfactory
 
 class Duck : Animal {
     override fun getAnimal(): String {

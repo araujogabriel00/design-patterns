@@ -1,15 +1,17 @@
-import singleton.Singleton
+import structural.BasicRemote
+import structural.Device
+import structural.Radio
 
 fun main(args: Array<String>) {
-//    TODO("Factory")
+
 //    val door = DoorFactory().makeDoor(100f, 200f)
 //    println(door)
 
-//    TODO("Abstract Factory")
+
 //    val makeAnimal = AnimalFactory().create("Dog")
 //    println(makeAnimal)
 
-//  TODO("Builder")
+
 //    val foodOrder = FoodOrder.Builder()
 //        .bread("white bread")
 //        .meat("bacon")
@@ -18,7 +20,7 @@ fun main(args: Array<String>) {
 //
 //    println(foodOrder)
 
-    //TODO("Prototype")
+
 //    val original: Shape = Shape().apply {
 //        xCoordinate = 10
 //        yCoordinate = 3
@@ -33,12 +35,19 @@ fun main(args: Array<String>) {
 //
 //    println(copy!!)
 
-    //TODO("Singleton")
 
-    val singleton: Singleton? = Singleton.getInstance("FOO")
-    val anotherSingleton: Singleton? = Singleton.getInstance("BAR")
-    println(singleton?.value)
-    println(anotherSingleton?.value)
+//    val singleton: Singleton? = Singleton.getInstance("FOO")
+//    val anotherSingleton: Singleton? = Singleton.getInstance("BAR")
+//    println(singleton?.value)
+//    println(anotherSingleton?.value)
 
+    testDevice(Radio())
 
+}
+
+fun testDevice(device: Device) {
+    println("Tests with basic remote.")
+    val basicRemote = BasicRemote(device)
+    basicRemote.togglePower()
+    device.printStatus()
 }

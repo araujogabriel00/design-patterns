@@ -1,4 +1,4 @@
-package abstractfactory
+package creational.abstractfactory
 
 class AnimalFactory : AbstractFactory<Animal?> {
 

@@ -1,4 +1,4 @@
-package abstractfactory
+package creational.abstractfactory
 
 interface Animal {
     fun getAnimal(): String

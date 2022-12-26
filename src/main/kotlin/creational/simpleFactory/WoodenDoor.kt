@@ -1,4 +1,4 @@
-package simpleFactory
+package creational.simpleFactory
 
 class WoodenDoor(
     private val width: Float,
